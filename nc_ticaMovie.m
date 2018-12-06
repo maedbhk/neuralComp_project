@@ -402,11 +402,13 @@ switch what
        
        currAxes=axes; 
        
+       % loop over the movie
        while hasFrame(V)
            vidFrame=readFrame(V);
            image(vidFrame,'Parent',currAxes);
            currAxes.Visible='off';
            pause(1/V.FrameRate); 
+ 
        end
        
        disp(x); 
